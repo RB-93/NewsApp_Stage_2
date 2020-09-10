@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin4dp"
+    app:cardBackgroundColor="@color/card_bg_color"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/author_text"
+        app:layout_constraintTop_toBottomOf="@+id/author_text">
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="@dimen/news_image_dimen"
+            android:layout_height="@dimen/news_image_dimen"
+            android:background="@drawable/rounded_image"
+            android:contentDescription="@string/no_content_desc"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/news_text"
+            android:layout_width="@dimen/width0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16dp"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:layout_marginBottom="@dimen/margin8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/libre_franklin_sb"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/color_black"
+            app:layout_constraintEnd_toStartOf="@+id/newsImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="News Title" />
+
+        <TextView
+            android:id="@+id/author_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:fontFamily="@font/libre_franklin_r"
+            android:textAppearance="?android:textAppearance"
+            android:textColor="@color/color_dark_grey"
+            app:layout_constraintBottom_toTopOf="@+id/timestamp_text"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Author" />
+
+        <TextView
+            android:id="@+id/timestamp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginBottom="@dimen/margin8dp"
+            android:fontFamily="@font/libre_franklin_r"
+            android:textAppearance="?android:textAppearance"
+            android:textColor="@color/color_light_grey"
+            app:layout_constraintBottom_toTopOf="@+id/section_text"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Timestamp" />
+
+        <TextView
+            android:id="@+id/section_text"
+            android:layout_width="@dimen/width0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin16dp"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:layout_marginBottom="@dimen/margin8dp"
+            android:background="@drawable/section_style"
+            android:ellipsize="end"
+            android:fontFamily="@font/libre_franklin_sb"
+            android:padding="@dimen/padding4dp"
+            android:textAllCaps="true"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/newsImage"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="News Section" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
